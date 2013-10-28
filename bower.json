@@ -1,0 +1,17 @@
+{
+  "name": "learn_english",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hukuuu/learn_english",
+  "authors": [
+    "hukuuu <hukuuu@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
