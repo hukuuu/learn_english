@@ -1,0 +1,4 @@
+<div class="pull-left col-lg-2">
+	<label ng-click="toggle()" for="" ng-class="{'label-success':success, 'label-danger':fail,'label-primary':true}" >{{word.englishValue}}<strong ng-class="{'success glyphicon glyphicon-ok':success, 'error glyphicon glyphicon-remove':fail }"></strong></label>
+	<input type="text" ng-keypress="keyPressed($event)" ng-class="{close: !isOpen, 'form-control':true}" placeholder="{{placeholder}}" ng-model="guess">
+</div>
