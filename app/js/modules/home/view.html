@@ -2,8 +2,8 @@
 	<div class="container">
 		<br />
 		<div class="row">
-			<div class="col-md-8">
-				<input type="text" name="searchTerm" id="searchTerm" value="" placeholder="search"/>
+			<div class="col-md-8" ng-controller="SearchCtrl">
+				<input type="text" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="search"/>
 				<span class="glyphicon glyphicon-search"></span>
 			</div>
 			<div class="col-md-4" ng-controller="AddCtrl">

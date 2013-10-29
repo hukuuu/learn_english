@@ -1,8 +1,14 @@
 angular.module('list',[])
-	.controller('ListCtrl',['$scope','WordService',function($scope,wordService){
+	.controller('ListCtrl',['$scope','WordService','$rootScope',function($scope,wordService,$rootScope){
 		console.log('list controller working....',wordService);
-		wordService.list()
+		$rootScope.$on('search',function(event,term){
+			console.log('list controller shoulda search...',term);
+			wordService.list(term)
 			.then(function(payload){
 				$scope.words = payload.data
 			});
+
+		});
+		$rootScope.$emit('search','');
+
 	}]);

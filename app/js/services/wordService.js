@@ -5,8 +5,11 @@ angular.module('services',[])
 			$http.post('http://learnenglishonline.herokuapp.com/words.json', word);
 		}
 
-		function list () {
-			console.log('listing words');
+		function list (term) {
+			console.log('listing words',term);
+			if (term) {
+				return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:{filter:term}});
+			}
 			return $http.get('http://learnenglishonline.herokuapp.com/words.json');
 		}
 
