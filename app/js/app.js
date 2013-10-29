@@ -6,8 +6,7 @@ angular.module('myApp', [
   'ngRoute',
   'services',
   'directives',
-  'home',
-  'add'
+  'home'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'js/modules/home/view.html'});

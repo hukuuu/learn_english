@@ -10,5 +10,9 @@
 				<add-word on-add="addWord"></add-word>
 			</div>
 		</div>
+		<div class="row" ng-controller="ListCtrl">
+			<span ng-repeat="w in words">{{w.englishValue}}</span>
+			<word></word>
+		</div>
 	</div>
 </div>

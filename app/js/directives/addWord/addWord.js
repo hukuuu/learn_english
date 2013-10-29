@@ -6,12 +6,10 @@ angular.module('directives', [])
       scope: {
 	onAdd: '='
       },
-      templateUrl: 'js/directives/html/addword.html',
+      templateUrl: 'js/directives/addWord/addword.html',
 	link: function(scope, element, attrs){
 		var counter = 2;
-		scope.word = {
-			bulgarianValues: [{index:1,value:''}]
-		};
+		clear();
 		scope.toggleFormShow = function(){
 			scope.showForm = !scope.showForm;
 		}
@@ -22,6 +20,9 @@ angular.module('directives', [])
   				bulgarianValues: scope.word.bulgarianValues.map(function(def){return def.value})
 			}
 			scope.onAdd(word);
+			scope.onCancel();
+		}
+		scope.onCancel = function(){
 			scope.showForm = !scope.showForm;
 			clear();
 		}
@@ -34,7 +35,9 @@ angular.module('directives', [])
 		}
 
 		function clear() {
-			scope.word = {};
+			scope.word = {
+				bulgarianValues: [{index:1,value:''}]
+			}
 		}
 	}
     };
