@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Learn English App",
+  "version": "1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "128": "icon.png" }
+}
