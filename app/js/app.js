@@ -9,6 +9,8 @@ angular.module('myApp', [
   'home'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/home', {templateUrl: 'js/modules/home/view.html'});
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider
+	.when('/home', {templateUrl: 'js/modules/home/view.html'})
+	.when('/add', {templateUrl: 'js/modules/add/view.html'})
+	.otherwise({redirectTo: '/home'});
 }]);

@@ -1,5 +1,5 @@
-	<button type="button" class="btn btn-default navbar-btn" ng-hide="showForm" ng-click="toggleFormShow()">Add Word</button>
-	<form role="form" ng-show="showForm">
+<div ng-controller="AddCtrl">
+	<form role="form" >
 		<div class="form-group">
 			<input type="text" ng-model="word.type" class="form-control"  id="type" placeholder="type">
 			<input type="text" ng-model="word.englishValue" class="form-control" id="english" placeholder="english">
@@ -9,6 +9,6 @@
 				<span ng-show="$last" class="glyphicon glyphicon-plus" ng-click="addDefinition()"></span>
 			</div>
 		</div>
-		<button type="button" class="btn btn-default" ng-click="onOk()">Ok</button>
-		<button type="button" class="btn btn-default" ng-click="onCancel()"  >Cancel</button>
+		<button type="button" class="btn btn-info" ng-click="onOk()">Submit</button>
 	</form>
+</div>

@@ -1,22 +1,6 @@
 <div ng-controller="HomeCtrl">
 	<div class="container">
 		<br />
-		<div class="row">
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="row" ng-controller="SearchCtrl">
 				<nav class="navbar navbar-default" role="navigation">
 					<a class="navbar-brand" href>Learn English</a>
@@ -26,8 +10,8 @@
 							<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
 						</div>
 					</form>
-					<ul class="nav navbar-nav navbar-right" ng-controller="AddCtrl">
-						<add-word on-add="addWord"></add-word>
+					<ul class="nav navbar-nav navbar-right">
+						<!-- link -->
 					</ul>
 				</nav>
 		</div>
