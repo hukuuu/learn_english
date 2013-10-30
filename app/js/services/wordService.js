@@ -7,10 +7,13 @@ angular.module('services',[])
 
 		function list (term) {
 			console.log('listing words',term);
-			if (term) {
-				return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:{filter:term}});
+			var params = {
+				size:10
 			}
-			return $http.get('http://learnenglishonline.herokuapp.com/words.json');
+			if(term)
+				params.filter = term;
+
+			return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:params});
 		}
 
 
