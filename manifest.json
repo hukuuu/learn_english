@@ -4,8 +4,8 @@
   "version": "1",
   "app": {
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["app/background.js"]
     }
   },
-  "icons": { "128": "icon.png" }
+  "icons": { "128": "app/icon.png" }
 }

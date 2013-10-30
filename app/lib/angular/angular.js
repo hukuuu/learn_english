@@ -9279,8 +9279,9 @@ function getterFn(path, options, fullExp) {
   var pathKeys = path.split('.'),
       pathKeysLength = pathKeys.length,
       fn;
-
+  console.log(options);
   if (options.csp) {
+	  console.log('csp enabled');
     fn = (pathKeysLength < 6)
         ? cspSafeGetterFn(pathKeys[0], pathKeys[1], pathKeys[2], pathKeys[3], pathKeys[4], fullExp, options)
         : function(scope, locals) {
@@ -9296,6 +9297,7 @@ function getterFn(path, options, fullExp) {
           return val;
         }
   } else {
+	  console.log('csp not enabled');
     var code = 'var l, fn, p;\n';
     forEach(pathKeys, function(key, index) {
       ensureSafeMemberName(key, fullExp);
