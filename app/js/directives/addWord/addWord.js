@@ -1,4 +1,4 @@
-angular.module('directives', [])
+angular.module('directives')
   .directive('addWord', function() {
 	  console.log('making addword directive');
     return {
@@ -26,6 +26,7 @@ angular.module('directives', [])
 			scope.showForm = !scope.showForm;
 			clear();
 		}
+		
 		scope.addDefinition = function() {
 			scope.word.bulgarianValues.push({index:counter++,value:''});
 		}
