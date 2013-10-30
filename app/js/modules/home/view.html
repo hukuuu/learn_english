@@ -2,13 +2,34 @@
 	<div class="container">
 		<br />
 		<div class="row">
-			<div class="col-md-8" ng-controller="SearchCtrl">
-				<input type="text" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="search"/>
-				<span class="glyphicon glyphicon-search"></span>
-			</div>
-			<div class="col-md-4" ng-controller="AddCtrl">
-				<add-word on-add="addWord"></add-word>
-			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="row" ng-controller="SearchCtrl">
+				<nav class="navbar navbar-default" role="navigation">
+					<a class="navbar-brand" href>Learn English</a>
+
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<add-word on-add="addWord"></add-word>
+					</ul>
+				</nav>
 		</div>
 		<div ng-controller="ListCtrl">
 			<div class="row">

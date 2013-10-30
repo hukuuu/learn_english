@@ -1,5 +1,4 @@
-<div>
-	<button type="button" ng-hide="showForm" ng-click="toggleFormShow()">Add Word</button>
+	<button type="button" class="btn btn-default navbar-btn" ng-hide="showForm" ng-click="toggleFormShow()">Add Word</button>
 	<form role="form" ng-show="showForm">
 		<div class="form-group">
 			<input type="text" ng-model="word.type" class="form-control" id="type" placeholder="type">
@@ -13,5 +12,3 @@
 		<button type="button" class="btn btn-default" ng-click="onOk()">Ok</button>
 		<button type="button" class="btn btn-default" ng-click="onCancel()">Cancel</button>
 	</form>
-
-</div>
