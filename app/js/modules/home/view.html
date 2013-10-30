@@ -2,18 +2,11 @@
 	<div class="container">
 		<br />
 		<div class="row" ng-controller="SearchCtrl">
-				<nav class="navbar navbar-default" role="navigation">
-					<a class="navbar-brand" href>Learn English</a>
-
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
-						</div>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<!-- link -->
-					</ul>
-				</nav>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
+				</div>
+			</form>
 		</div>
 		<div ng-controller="ListCtrl">
 			<div class="row">
