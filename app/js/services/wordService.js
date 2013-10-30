@@ -8,7 +8,7 @@ angular.module('services',[])
 		function list (term) {
 			console.log('listing words',term);
 			var params = {
-				size:10
+				size:12
 			}
 			if(term)
 				params.filter = term;

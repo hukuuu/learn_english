@@ -22,18 +22,21 @@ body {
 	background: #428bca;
 }
 
-.word input {
-	padding: 5px 9px;
-	font-size: 18px;
-	border-radius: 0;
-}
-
 .word.word-open input {
 	display: block;
 }
-
-.word.word-close input {
+.word.word-open label {
 	display: none;
+}
+.word.word-close input {
+	/*display: none;*/
+	/*visibility:hidden;*/
+	top: -35px;
+	position: relative;
+	z-index: -1;
+}
+.word.word-close label {
+	display: block;
 }
 
 .word input {
