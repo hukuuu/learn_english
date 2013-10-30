@@ -10,8 +10,13 @@
 				<add-word on-add="addWord"></add-word>
 			</div>
 		</div>
-		<div class="row" ng-controller="ListCtrl">
-			<word ng-repeat ="word in words" word="word"></word>
+		<div ng-controller="ListCtrl">
+			<div class="row">
+				<word ng-repeat ="word in words" word="word"></word>
+			</div>
+			<div class="row">
+				<span ng-click="refresh()" class="glyphicon glyphicon-refresh"></span>
+			</div>
 		</div>
 	</div>
 </div>
