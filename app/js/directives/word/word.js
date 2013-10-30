@@ -13,22 +13,17 @@ angular.module('directives')
 	link: function(scope, element, attrs){
 		scope.placeholder = 'guess \u21B5';
 		scope.guess="";
-		scope.success = false;
-		scope.fail = false;
+		scope.openClosedState = "word-close";
 		scope.toggle = function(){
-			scope.isOpen = !scope.isOpen;
+			scope.openClosedState = (scope.openClosedState === "word-close") ? "word-open" : "word-close";
 		};
 		scope.keyPressed = function(event) {
 			if(event.keyCode === ENTER_KEYCODE) {
 				if (scope.word.bulgarianValues.indexOf(scope.guess.trim())>-1) {
-					console.log('pozna');
-					scope.success = true;
-					scope.fail = false;
+					scope.successFailState = "word-success";
 
 				} else {
-					console.log('ne pozna');
-					scope.success = false;
-					scope.fail = true;
+					scope.successFailState = "word-error";
 				}
 			}
 		}
