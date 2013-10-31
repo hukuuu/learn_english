@@ -8,8 +8,11 @@
 				<span ng-show="!$last" class="glyphicon glyphicon-minus" ng-click="removeDefinition($index)"></span>
 				<span ng-show="$last" class="glyphicon glyphicon-plus" ng-click="addDefinition()"></span>
 			</div>
-			<typeahead first="nickolay" last="rusev"></typeahead>
+		</div>
+		<div ng-repeat = "state in word.states">
+
 		</div>
 		<button type="button" class="btn btn-info" ng-click="onOk()">Submit</button>
+		<input type="text" ng-model="selected" typeahead="state for state in word.states | filter:$viewValue | limitTo:8">
 	</form>
 </div>
