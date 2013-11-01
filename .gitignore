@@ -2,3 +2,4 @@ logs/*
 !.gitkeep
 *.swp
 bower_components
+nbproject/*
