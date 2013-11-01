@@ -1,30 +1,42 @@
-<div ng-controller="HomeCtrl">
-	<div class="container">
-		<br />
-		<div class="row" ng-controller="SearchCtrl">
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
-				</div>
-
-				<input type="text" class="form-control" ng-model="selectedTag" ng-enter="addTag()" placeholder="tags" typeahead="tag for tag in tags | filter:$viewValue | limitTo:8" >
-
-				<div class="add-label">
-					<span ng-repeat="tag in selectedTags" class="label label-primary">{{tag}}
-						<a ng-click="removeTag(tag)" href>
-							<span class="glyphicon glyphicon-remove"></span>
-						</a>
-					</span>
-				</div>
-			</form>
-		</div>
-		<div  ng-controller="ListCtrl">
-			<div class="row">
-				<word ng-repeat ="word in words" word="word"></word>
-			</div>
-			<div class="row">
-				<span ng-click="refresh()" class="glyphicon glyphicon-refresh"></span>
-			</div>
-		</div>
-	</div>
+<div ng-controller="HomeCtrl">    
+    <div class="row" ng-controller="SearchCtrl">        
+        <form role="search">            
+            <div class="col-lg-3">
+                <div class="input-group">                    
+                    <input type="text" class="form-control" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
+                    <span class="input-group-btn">
+                       <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                   </span>                
+                </div>  
+           </div>          
+           <div class="col-lg-3">
+                 <div class="input-group">                    
+                     <input type="text" class="form-control" ng-model="selectedTag" ng-enter="addTag()" placeholder="tags" typeahead="tag for tag in tags | filter:$viewValue | limitTo:8" >
+                     <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-tag"></span></button>
+                    </span>                
+                 </div>  
+           </div>
+           <div class="col-lg-6">
+                <div class="form-control">
+                    <span ng-repeat="tag in selectedTags" class="label label-primary">{{tag}}
+                        <a ng-click="removeTag(tag)" href>
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </span>
+                </div>
+           </div>
+        </form>
+        
+    </div>
+    
+    <div ng-controller="ListCtrl">
+        <div class="row">
+            <word ng-repeat ="word in words" word="word"></word>
+        </div>
+        <div class="row">
+            <span ng-click="refresh()" class="glyphicon glyphicon-refresh"></span>
+        </div>
+    </div>
+    
 </div>

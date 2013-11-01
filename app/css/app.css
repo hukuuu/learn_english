@@ -139,6 +139,7 @@ body {
     padding: 10px;
     margin-bottom: 10px;
 }
+
 #add-form .add-label .label {
     margin-bottom: 5px;
     margin-right:5px;
@@ -149,4 +150,16 @@ body {
  color: white;
 }
 
+
+
 /*** / Add form ***/
+
+/*** Labales ***/
+
+.labales {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    height: 34px;
+}
+
+/*** / Labales ***/

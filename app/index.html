@@ -9,46 +9,51 @@
     <body>
 	<!-- Navigation-->
         <nav class="navbar navbar-default" role="navigation">
-            <a class="navbar-brand" href="#/home">Learn English</a>
+            <div class="container">
+                          <a class="navbar-brand" href="#/home">Learn English</a>
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="navbar-brand" href="#/add">Add Word</a><li>
-            </ul>
+            </ul>  
+            </div>
+
         </nav>
 	<!-- / Navigation-->
-	<div ng-view class="container"></div>
-
+	<!-- Container Content -->
+        <div ng-view id="content" class="container"></div>
+        <!-- / Container Content -->
+       
         <!-- In production use:
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
         -->
 
-        <!--libs-->
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-route/angular-route.js"></script>
-  <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-0.6.0.js"></script>
-  <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-tpls-0.6.0.js"></script>
+        <!-- Libs -->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+        <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-0.6.0.js"></script>
+        <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-tpls-0.6.0.js"></script>
 
-        <!--libs-->
+        <!-- / Libs -->
 
         <script src="js/app.js"></script>
 
-        <!--modules-->
+        <!-- Modules -->
         <script src="js/modules/home/controller.js"></script>
         <script src="js/modules/add/controller.js"></script>
         <script src="js/modules/list/controller.js"></script>
         <script src="js/modules/search/controller.js"></script>
-        <!--modules-->
+        <!-- / Modules -->
 
-        <!--directives-->
+        <!-- Directives -->
         <script src="js/directives/module.js"></script>
         <script src="js/directives/enter/enter.js"></script>
         <script src="js/directives/word/word.js"></script>
-        <!--directives-->
+        <!-- / Directives -->
 
-        <!--services-->
-  <script src="js/services/module.js"></script>
+        <!-- Services -->
+        <script src="js/services/module.js"></script>
         <script src="js/services/wordService.js"></script>
-  <script src="js/services/tagService.js"></script>
-        <!--services-->
+        <script src="js/services/tagService.js"></script>
+        <!-- / Services -->
     </body>
 </html>
