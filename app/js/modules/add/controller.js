@@ -13,14 +13,23 @@ angular.module('add',['ui.bootstrap'])
 			var word = {
 				type: $scope.word.type,
   				englishValue: $scope.word.englishValue,
-  				bulgarianValues: $scope.word.bulgarianValues.map(function(def){return def.value})
+  				bulgarianValues: $scope.word.bulgarianValues.map(function(def){return def.value}),
+  				tags : $scope.word.tags
 			}
 			wordService.add(word);
 		}
 		$scope.addTag  = function () {
 			console.log("add tag",$scope.word.selected);
-			$scope.word.tags.push($scope.word.selected);
+			if($scope.word.tags.indexOf($scope.word.selected) == -1){
+				$scope.word.tags.push($scope.word.selected);
+			}
 			$scope.word.selected='';
+		}
+		$scope.removeTag  = function (event) {
+			var tagText = event.target.innerText.trim();
+			console.log("removeTag",tagText);
+			var indexOfText = $scope.word.tags.indexOf(tagText);
+			$scope.word.tags.splice(indexOfText,1);
 		}
 		var counter = 2;
 		$scope.addDefinition = function() {

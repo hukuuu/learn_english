@@ -10,7 +10,7 @@
 			</div>
 			<input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" typeahead="state for state in word.states | filter:$viewValue | limitTo:8" >
 			<div ng-repeat="tag in word.tags">
-				<button type="button" class="btn btn-default btn-lg">
+				<button type="button" class="btn btn-default btn-lg" ng-click="removeTag($event)">
 				  <span class="glyphicon glyphicon-remove-sign"></span> 
 				  {{tag}}
 				</button>
