@@ -2,7 +2,9 @@ angular.module('add',['ui.bootstrap'])
 	.controller('AddCtrl',['$scope','WordService','TagService',function($scope,wordService,tagService){
 		console.log('add controller is working',$scope);
 		$scope.word = {};
-		$scope.states = tagService.list();
+		$scope.states = tagService.list().then(function(payload){
+				$scope.states = payload.data
+			});
 		
 		$scope.word = {
 			bulgarianValues: [{index:1,value:''}],
