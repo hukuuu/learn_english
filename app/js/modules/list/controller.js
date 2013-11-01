@@ -1,23 +1,21 @@
 angular.module('list',[])
 	.controller('ListCtrl',['$scope','WordService','$rootScope',function($scope,wordService,$rootScope){
-		console.log('list controller working....',wordService);
 
-		var lastTerm;
+		var lastConfig;
 
-		$rootScope.$on('search',function(event,term){
-			search(term);
+		$rootScope.$on('search',function(event,config){
+			search(config);
 		});
-		$rootScope.$emit('search','');
+		$rootScope.$emit('search');
 
 		$scope.refresh = function(){
-			search(lastTerm);
+			search(lastConfig);
 		}
 
 
-		function search(term){
-			console.log('list controller shoulda search...',term);
-			lastTerm = term;
-			wordService.list(term)
+		function search(config){
+			lastConfig = config
+			wordService.list(config)
 			.then(function(payload){
 				$scope.words = payload.data
 			});

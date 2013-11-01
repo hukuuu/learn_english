@@ -6,9 +6,19 @@
 				<div class="form-group">
 					<input type="text" class="form-control input-sm" ng-keyup="onKeyUp()" ng-model="searchTerm" placeholder="Search"/>
 				</div>
+
+				<input type="text" class="form-control" ng-model="selectedTag" ng-enter="addTag()" placeholder="tags" typeahead="tag for tag in tags | filter:$viewValue | limitTo:8" >
+
+				<div class="add-label">
+					<span ng-repeat="tag in selectedTags" class="label label-primary">{{tag}}
+						<a ng-click="removeTag(tag)" href>
+							<span class="glyphicon glyphicon-remove"></span>
+						</a>
+					</span>
+				</div>
 			</form>
 		</div>
-		<div ng-controller="ListCtrl">
+		<div  ng-controller="ListCtrl">
 			<div class="row">
 				<word ng-repeat ="word in words" word="word"></word>
 			</div>
