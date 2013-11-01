@@ -8,7 +8,15 @@
 				<span ng-show="!$last" class="glyphicon glyphicon-minus" ng-click="removeDefinition($index)"></span>
 				<span ng-show="$last" class="glyphicon glyphicon-plus" ng-click="addDefinition()"></span>
 			</div>
+			<input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" typeahead="state for state in word.states | filter:$viewValue | limitTo:8" >
+			<div ng-repeat="tag in word.tags">
+				<button type="button" class="btn btn-default btn-lg">
+				  <span class="glyphicon glyphicon-remove-sign"></span> 
+				  {{tag}}
+				</button>
+			</div>
 		</div>
 		<button type="button" class="btn btn-info" ng-click="onOk()">Submit</button>
+		
 	</form>
 </div>
