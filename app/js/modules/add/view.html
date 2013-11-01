@@ -1,22 +1,19 @@
-<div ng-controller="AddCtrl">
-	<form role="form" >
-		<div class="form-group">
-			<input type="text" ng-model="word.type" class="form-control"  id="type" placeholder="type">
-			<input type="text" ng-model="word.englishValue" class="form-control" id="english" placeholder="english">
-			<div ng-repeat="bv in word.bulgarianValues" >
-				<input type="text" ng-model="word.bulgarianValues[$index].value" class="form-control" id="bulgarian" ng-enter="onOk()" placeholder="bulgarian">
-				<span ng-show="!$last" class="glyphicon glyphicon-minus" ng-click="removeDefinition($index)"></span>
-				<span ng-show="$last" class="glyphicon glyphicon-plus" ng-click="addDefinition()"></span>
-			</div>
-			<input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" typeahead="state for state in word.states | filter:$viewValue | limitTo:8" >
-			<div ng-repeat="tag in word.tags">
-				<button type="button" class="btn btn-default btn-lg" ng-click="removeTag($event)">
-				  <span class="glyphicon glyphicon-remove-sign"></span> 
-				  {{tag}}
-				</button>
-			</div>
-		</div>
-		<button type="button" class="btn btn-info" ng-click="onOk()">Submit</button>
-		
-	</form>
-</div>
+<!-- Add Form -->
+<h1>Add some words <small>some verbs</small></h1>
+<form id="add-form" class="" role="form" ng-controller="AddCtrl">
+    <input type="text" ng-model="word.englishValue" class="form-control" id="english" placeholder="english">
+    <div ng-repeat="bv in word.bulgarianValues"  class="input-group">        
+        <input type="text" ng-model="word.bulgarianValues[$index].value" class="form-control id="bulgarian" ng-enter="onOk()" placeholder="bulgarian">        
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-show="!$last" ng-click="removeDefinition($index)" title="Remove Row"><span class="glyphicon glyphicon-minus"></span></button>            
+            <button type="button" class="btn btn-default" ng-show="$last" ng-click="addDefinition()" title="Add Row"><span class="glyphicon glyphicon-plus"></span></button>
+        </span>
+    </div>
+    <input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" placeholder="tags" typeahead="state for state in states | filter:$viewValue | limitTo:8" >
+
+    <div class="add-label">
+            <span ng-repeat="tag in word.tags" class="label label-primary">{{tag}}<a ng-click="removeTag(tag)" href><span class="glyphicon glyphicon-remove"></span></a></span>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="onOk()">Save</button>
+</form>
+<!-- / Add Form -->
