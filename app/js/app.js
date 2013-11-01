@@ -11,6 +11,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
 	.when('/home', {templateUrl: 'js/modules/home/view.html'})
-	.when('/add', {templateUrl: 'js/modules/add/view.html'})
+	.when('/add', {templateUrl: 'js/modules/add/form_kamen.html'})
 	.otherwise({redirectTo: '/home'});
 }]);
