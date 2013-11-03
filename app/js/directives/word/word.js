@@ -1,5 +1,5 @@
 angular.module('directives')
-  .directive('word', ['$timeout',function($timeout) {
+  .directive('word', ['$timeout','$rootScope','HintService',function($timeout,$rootScope,$hintService) {
 	  var ENTER_KEYCODE = 13;
     return {
       restrict: 'E',
@@ -32,15 +32,12 @@ angular.module('directives')
 				scope.successFailState = "word-error";
 			}
 		}
-
-
 		scope.select = function(){
 			scope.toggle();
 			$timeout(function(){
 				input[0].focus();
 			});
 		}
-
 		input.bind('focusin',function(event){
 			$timeout(function(){
 				scope.openClosedState = "word-open";
@@ -52,6 +49,16 @@ angular.module('directives')
 				scope.openClosedState = "word-close";
 			});
 		});
+			
+		$rootScope.$on('hint',hint);
+		function hint() {
+			if(input.parent().hasClass('word-open')){
+				$timeout(function(){
+					input.val('');
+					scope.placeholder = $hintService.hint(scope.word.bulgarianValues[0]);
+				});
+			}
+		}
 
 	}
     };
