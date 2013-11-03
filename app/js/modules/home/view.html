@@ -32,7 +32,7 @@
     
     <div ng-controller="ListCtrl">
         <div class="row">
-            <word ng-repeat ="word in words" word="word"></word>
+            <word ng-repeat ="word in words" word="word" hint="hint(word)"></word>
         </div>
         <div class="row">
             <span ng-click="refresh()" class="glyphicon glyphicon-refresh"></span>

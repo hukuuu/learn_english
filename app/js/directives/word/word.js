@@ -1,11 +1,12 @@
 angular.module('directives')
-  .directive('word', ['$timeout','$rootScope','HintService',function($timeout,$rootScope,$hintService) {
+  .directive('word', ['$timeout','$rootScope',function($timeout,$rootScope) {
 	  var ENTER_KEYCODE = 13;
     return {
       restrict: 'E',
 
       scope: {
-	      word: '='
+	      word: '=',
+  		hint: '='
       },
 	replace:true,
       templateUrl: 'js/directives/word/word.html',
@@ -55,7 +56,7 @@ angular.module('directives')
 			if(input.parent().hasClass('word-open')){
 				$timeout(function(){
 					input.val('');
-					scope.placeholder = $hintService.hint(scope.word.bulgarianValues[0]);
+					scope.placeholder = scope.hint;
 				});
 			}
 		}
