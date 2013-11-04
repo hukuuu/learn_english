@@ -17,7 +17,7 @@
                     </span>                
                  </div>  
            </div>
-           <div class="col-lg-6">
+           <div class="col-lg-5">
                 <div class="form-control">
                     <span ng-repeat="tag in selectedTags" class="label label-primary">{{tag}}
                         <a ng-click="removeTag(tag)" href>
@@ -25,6 +25,9 @@
                         </a>
                     </span>
                 </div>
+           </div>
+           <div  class="col-lg-1">
+               <button class="btn btn-default" type="button" ng-click="reset()"><span class="glyphicon glyphicon-remove"></span></button>
            </div>
         </form>
         
