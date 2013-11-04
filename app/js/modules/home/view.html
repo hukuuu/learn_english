@@ -13,7 +13,7 @@
                  <div class="input-group">                    
                      <input type="text" class="form-control" ng-model="selectedTag" ng-enter="addTag()" placeholder="tags" typeahead="tag for tag in tags | filter:$viewValue | limitTo:8" >
                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-tag"></span></button>
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-tag" ng-click="addTag()"></span></button>
                     </span>                
                  </div>  
            </div>
