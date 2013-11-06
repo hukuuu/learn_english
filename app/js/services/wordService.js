@@ -3,7 +3,9 @@ angular.module('services')
 		function add(word) {
 			$http.post('http://learnenglishonline.herokuapp.com/words.json', word);
 		}
-
+		function update(obj,id) {
+			$http.put('http://learnenglishonline.herokuapp.com/words/' + id, obj );	
+		}
 		function list (config) {
 
 			var params = {
@@ -17,10 +19,9 @@ angular.module('services')
 			}
 			return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:params});
 		}
-
-
 		return {
 			add : add,
-			list: list
+			list: list,
+			update : update
 		}
 	}]);

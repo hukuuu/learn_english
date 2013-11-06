@@ -20,9 +20,11 @@ angular.module('add',['ui.bootstrap'])
   				bulgarianValues: $scope.word.bulgarianValues.map(function(def){return def.value}),
   				tags : $scope.word.tags
 			}
-			console.log('originalWord',$scope.originalWord);
+			console.log('originalWord',window.targetWord = $scope.originalWord);
 			console.log('targetWord',word);
-			console.log($utilsService.diffFields($scope.originalWord,word));
+			var wordForUpdate = $utilsService.diffFields($scope.originalWord,word);
+			console.log(wordForUpdate);
+			wordService.update(wordForUpdate,$scope.originalWord.id);
 			//wordService.add(word);
 		}
 
