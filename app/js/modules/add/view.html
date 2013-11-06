@@ -1,19 +1,45 @@
 <!-- Add Form -->
-<h1>Add some words <small>some verbs</small></h1>
-<form id="add-form" class="" role="form" ng-controller="AddCtrl">
-    <input type="text" ng-model="word.englishValue" class="form-control" id="english" placeholder="english">
-    <div ng-repeat="bv in word.bulgarianValues"  class="input-group">        
-        <input type="text" ng-model="word.bulgarianValues[$index].value" class="form-control id="bulgarian" ng-enter="onOk()" placeholder="bulgarian">        
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-show="!$last" ng-click="removeDefinition($index)" title="Remove Row"><span class="glyphicon glyphicon-minus"></span></button>            
-            <button type="button" class="btn btn-default" ng-show="$last" ng-click="addDefinition()" title="Add Row"><span class="glyphicon glyphicon-plus"></span></button>
-        </span>
-    </div>
-    <input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" placeholder="tags" typeahead="state for state in states | filter:$viewValue | limitTo:8" >
-
-    <div class="add-label">
-            <span ng-repeat="tag in word.tags" class="label label-primary">{{tag}}<a ng-click="removeTag(tag)" href><span class="glyphicon glyphicon-remove"></span></a></span>
-    </div>
-    <button type="button" class="btn btn-primary btn-lg" ng-click="onOk()">Save</button>
-</form>
+<div class="row">
+   <h1>Add some words <small>some verbs</small></h1>
+    <form id="add-form" class="" role="form" ng-controller="AddCtrl">
+        
+        <div class="col-lg-12">
+            <input type="text" ng-model="word.englishValue" class="form-control" id="english" placeholder="english">
+        </div>
+        
+        <div class="col-lg-12">
+            <div ng-repeat="bv in word.bulgarianValues"  class="input-group">        
+                <input type="text" ng-model="word.bulgarianValues[$index].value" class="form-control id="bulgarian" ng-enter="onOk()" placeholder="bulgarian">        
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-show="!$last" ng-click="removeDefinition($index)" title="Remove Row"><span class="glyphicon glyphicon-minus"></span></button>            
+                    <button type="button" class="btn btn-default" ng-show="$last" ng-click="addDefinition()" title="Add Row"><span class="glyphicon glyphicon-plus"></span></button>
+                </span>
+            </div>
+        </div>
+        
+        <div class="col-lg-12">
+            <div class="input-group"> 
+                <input type="text" class="form-control" ng-model="word.selected" ng-enter="addTag()" placeholder="tags" typeahead="state for state in states | filter:$viewValue | limitTo:8" >
+                <span class="input-group-btn">
+                   <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-tag"></span></button>
+                </span>
+            </div>
+        </div>
+            
+        <div class="col-lg-12 labales">
+             <div class="form-control clearfix">
+                 <span class="item" ng-repeat="tag in word.tags">
+                     {{tag}}
+                     <a ng-click="removeTag(tag)" href>
+                         <span class="glyphicon glyphicon-remove"></span>
+                     </a>
+                 </span>
+             </div>
+        </div>
+        
+        <div class="col-lg-12">
+            <button type="button" class="btn btn-primary btn-lg" ng-click="onOk()">Save</button>
+       </div>
+    </form> 
+</div> 
 <!-- / Add Form -->
