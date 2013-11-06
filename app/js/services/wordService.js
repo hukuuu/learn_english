@@ -13,7 +13,6 @@ angular.module('services')
 				params.filter = config.filter;
 				params.tags = config.tags.join(',');
 			}
-
 			return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:params});
 		}
 

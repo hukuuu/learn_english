@@ -30,6 +30,11 @@ angular.module('search',[])
 			},450);
 
 		}
+		$scope.reset = function() {
+	    	$scope.selectedTags = [];
+	    	$scope.searchTerm = '';
+	    	search();
+	    }
 
 		function search () {
 			$rootScope.$emit('search', {
