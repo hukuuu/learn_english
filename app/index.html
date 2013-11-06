@@ -5,6 +5,7 @@
         <title>My AngularJS App</title>
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="css/app.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 	<!-- Navigation-->
@@ -12,15 +13,15 @@
             <div class="container">
                           <a class="navbar-brand" href="#/home">Learn English</a>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-brand" href="#/add">Add Word</a><li>
-            </ul>  
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="navbar-brand" href="#/add">Add Word</a><li>
+                    <li><a class="navbar-brand" href="#/settings">Settings</a><li>
+                </ul>  
             </div>
-
         </nav>
 	<!-- / Navigation-->
 	<!-- Container Content -->
-        <div ng-view class="container"></div>
+        <div ng-view id="content" class="container"></div>
         <!-- / Container Content -->
        
         <!-- In production use:
@@ -32,13 +33,14 @@
         <script src="../bower_components/angular-route/angular-route.js"></script>
         <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-0.6.0.js"></script>
         <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-tpls-0.6.0.js"></script>
+
         <!-- / Libs -->
 
         <script src="js/app.js"></script>
 
-	<!-- External-->
+	<!--external-->
         <script src="../bower_components/mousetrap/mousetrap.js"></script>
-	<!-- / External-->
+	<!--external-->
 
         <!-- Modules -->
         <script src="js/modules/home/controller.js"></script>

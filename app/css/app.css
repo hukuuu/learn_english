@@ -3,6 +3,7 @@
 ============================================================================= */
 body {
     font-family: 'Open Sans', arial, sans-serif;
+    background: #fff url('../img/bg.gif');
 }
 
 .word {
@@ -21,6 +22,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     background: #428bca;
+    border-radius: 5px;
 }
 
 .word.word-open input {
@@ -56,12 +58,52 @@ body {
     vertical-align: middle;
     background-color: #FFFFFF;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 5px;
 }
 
 .word input:focus {
     border-color: #66AFE9;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
     outline: 0 none;
+}
+
+/* =============================================================================
+  NAVBAR
+============================================================================= */
+.navbar-default {
+    padding: 20px 0 0;
+    border: none;
+    background: transparent;
+    
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.container > .navbar-brand {
+    padding-left: 0;
+    font-size: 30px;
+    padding-right: 0;
+    color: #464646;
+    font-weight: 100;
+    border-bottom: 2px solid #464646;
+}
+
+/* =============================================================================
+  FORM
+============================================================================= */
+.btn-success {
+    margin-top: 15px;
+}
+
+.main-tools {
+    margin-bottom: 15px;    
+    padding: 22px;
+    border: 2px solid #fff;
+    background: #f4f4f4;
 }
 
 /* =============================================================================
@@ -117,6 +159,10 @@ body {
 
 /*** Main Tools ***/
 
+#content {
+    padding: 15px;
+}
+
 .main-tools {
   margin-bottom: 15px;
 }
@@ -133,6 +179,14 @@ body {
   margin-bottom: 0;
 }
 /*** / Main Tools ***/
+
+/*** words container ***/
+.main-tools + div > div {
+    padding: 22px;
+    border: 2px solid #fff;
+    background: #f4f4f4;
+}
+/*** / words container ***/
 
 /*** Labales ***/
 
@@ -188,7 +242,9 @@ body {
 /*** Small devices (tablets, 768px and up) ***/
 
 @media (min-width: 768px) {
-    
+    .navbar > .container .navbar-brand {
+        margin-left: 0;
+    }
 }
 
 /*** Medium devices (desktops, 992px and up) ***/
