@@ -1,6 +1,5 @@
 angular.module('directives').directive('ngEnter', function() {        
         return function(scope, element, attrs) {
-            console.log("in directives");
             element.bind("keydown keypress", function(event) {
                 if(event.which === 13) {
                     scope.$apply(function(){
