@@ -3,9 +3,11 @@ angular.module('services')
 		function diffFields(src,target){
 		    var temp = {};
 		    for(prop in target){
-		    	if(target[prop] instanceof Array ){
-		    		if(!compareTwoArrays(src[prop].sort(),target[prop].sort())){
-		    			temp[prop]=target[prop];
+		    	if(target[prop] instanceof Array && target[prop]!=undefined){
+		    		if(src[prop] != undefined){
+			    		if(!compareTwoArrays(src[prop].sort(),target[prop].sort())){
+			    			temp[prop]=target[prop];
+			    		}
 		    		}
 		    		continue;
 		    	}
@@ -14,6 +16,15 @@ angular.module('services')
 		        }
 		    }
 		    return temp;
+		}
+
+		function isObjectEmpty(obj) {
+		    for(var prop in obj) {
+		        if(obj.hasOwnProperty(prop))
+		            return false;
+		    }
+
+		    return true;
 		}
 
 		function compareTwoArrays (src,target) {
@@ -41,6 +52,7 @@ angular.module('services')
 		}
 
 		return {
-			diffFields: diffFields
+			diffFields: diffFields,
+			isObjectEmpty : isObjectEmpty
 		}
 	}]);

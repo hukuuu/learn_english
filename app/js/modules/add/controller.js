@@ -1,5 +1,5 @@
 angular.module('add',['ui.bootstrap'])
-	.controller('AddCtrl',['$scope','WordService','TagService','$timeout','$rootScope','UtilsService',function($scope,wordService,tagService,$timeout,$rootScope,$utilsService){
+	.controller('AddCtrl',['$scope','WordService','TagService','$timeout','$rootScope','UtilsService',function($scope,wordService,tagService,$timeout,$rootScope,utilsService){
 		console.log('add controller is working',$scope);
 		var timeoutPromise;
 		$scope.word = {};
@@ -20,12 +20,15 @@ angular.module('add',['ui.bootstrap'])
   				bulgarianValues: $scope.word.bulgarianValues.map(function(def){return def.value}),
   				tags : $scope.word.tags
 			}
-			console.log('originalWord',window.targetWord = $scope.originalWord);
-			console.log('targetWord',word);
-			var wordForUpdate = $utilsService.diffFields($scope.originalWord,word);
-			console.log(wordForUpdate);
-			wordService.update(wordForUpdate,$scope.originalWord.id);
-			//wordService.add(word);
+			var wordForUpdate = utilsService.diffFields($scope.originalWord,word);
+			console.log('wordForUpdate',wordForUpdate);
+			if(utilsService.isObjectEmpty($scope.originalWord)){
+				wordService.add(word);
+			}
+			if(!utilsService.isObjectEmpty(wordForUpdate)){
+				wordService.update(wordForUpdate,$scope.originalWord.id);
+			}
+			
 		}
 
 		$scope.onKeyUp = function(){

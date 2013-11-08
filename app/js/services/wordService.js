@@ -4,7 +4,7 @@ angular.module('services')
 			$http.post('http://learnenglishonline.herokuapp.com/words.json', word);
 		}
 		function update(obj,id) {
-			$http.put('http://learnenglishonline.herokuapp.com/words/' + id, obj );	
+			$http.put('http://learnenglishonline.herokuapp.com/words/' + id + ".json", obj );	
 		}
 		function list (config) {
 
