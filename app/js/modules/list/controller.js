@@ -4,6 +4,7 @@ angular.module('list',[])
 		var lastConfig;
 
 		$rootScope.$on('search',function(event,config){
+			console.log("searcing");
 			search(config);
 		});
 		$rootScope.$emit('search');
