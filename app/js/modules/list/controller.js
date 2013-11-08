@@ -1,15 +1,15 @@
 angular.module('list',[])
-	.controller('ListCtrl',['$scope','WordService','$rootScope','HintService',function($scope,wordService,$rootScope, hintService){
+	.controller('ListCtrl',['$scope','WordService','$rootScope','HintService', '$timeout',function($scope,wordService,$rootScope, hintService, $timeout){
 
 		var lastConfig;
 
 		$rootScope.$on('search',function(event,config){
-			console.log("searcing");
 			search(config);
 		});
 		$rootScope.$emit('search');
 
 		$scope.refresh = function(){
+			console.log("refresh",lastConfig);
 			search(lastConfig);
 		}
 
@@ -18,7 +18,14 @@ angular.module('list',[])
 			lastConfig = config
 			wordService.list(config)
 			.then(function(payload){
-				$scope.words = payload.data
+				$timeout(function () {
+					$scope.$apply(function(){
+						$scope.words = payload.data;	
+						console.log("asdf");
+					});
+
+				});
+				
 			});
 		}
 		$scope.hint = function(word){

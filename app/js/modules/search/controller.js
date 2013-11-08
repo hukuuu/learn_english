@@ -36,6 +36,10 @@ angular.module('search',[])
 	    	search();
 	    }
 
+	    $scope.refresh = function() {
+	    	search();
+	    }
+
 		function search () {
 			$rootScope.$emit('search', {
 				filter : $scope.searchTerm,

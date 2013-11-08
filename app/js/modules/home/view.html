@@ -27,19 +27,29 @@
                     </span>
                 </div>
            </div>
+<<<<<<< Updated upstream
            <div class="col-lg-2 clearfix" ng-controller="ListCtrl">
                 <button class="btn btn-warning pull-left" type="button" ng-click="reset()"><span class="glyphicon glyphicon-remove"></span></button> 
                 <button type="button" class="btn btn-success pull-right" ng-click="refresh()"><span class="glyphicon glyphicon-refresh"></span> Refresh</button> 
           </div>
+=======
+           <div  class="col-lg-2">
+                <button class="btn btn-default" type="button" ng-click="reset()"><span class="glyphicon glyphicon-remove"></span></button>
+                <button type="button" class="btn btn-success" ng-click="refresh()"><span class="glyphicon glyphicon-refresh"></span> </button> 
+           </div>
+>>>>>>> Stashed changes
         </form>        
     </div>    
     <div ng-controller="ListCtrl">
         <div class="row">
             <word ng-repeat ="word in words" word="word" hint="hint(word)"></word>
         </div>
+<<<<<<< Updated upstream
         
         <div class="row">
             <span ng-click="refresh()" class="glyphicon glyphicon-refresh"></span>
         </div>
+=======
+>>>>>>> Stashed changes
     </div>    
 </div>
