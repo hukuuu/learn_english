@@ -21,7 +21,6 @@ angular.module('list',[])
 				$timeout(function () {
 					$scope.$apply(function(){
 						$scope.words = payload.data;	
-						console.log("asdf");
 					});
 
 				});
