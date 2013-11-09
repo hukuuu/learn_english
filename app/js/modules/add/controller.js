@@ -22,12 +22,14 @@ angular.module('add',['ui.bootstrap'])
 			}
 			var wordForUpdate = utilsService.diffFields($scope.originalWord,word);
 			console.log('wordForUpdate',wordForUpdate);
-			if(utilsService.isObjectEmpty($scope.originalWord)){
-				wordService.add(word);
+			if(!$scope.isWordFound){
+				console.log("add",JSON.stringify(word));
+				wordService.add(word);				
+			}else{
+				console.log("update",JSON.stringify(wordForUpdate);
+				wordService.update(wordForUpdate);
 			}
-			if(!utilsService.isObjectEmpty(wordForUpdate)){
-				wordService.update(wordForUpdate,$scope.originalWord.id);
-			}
+			
 			
 		}
 
