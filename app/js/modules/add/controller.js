@@ -27,7 +27,7 @@ angular.module('add',['ui.bootstrap'])
 				wordService.add(word);				
 			}else{
 				console.log("update",JSON.stringify(wordForUpdate));
-				wordService.update(wordForUpdate);
+				wordService.update(wordForUpdate,$scope.originalWord.id);
 			}
 			
 			
