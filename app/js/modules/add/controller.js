@@ -26,7 +26,7 @@ angular.module('add',['ui.bootstrap'])
 				console.log("add",JSON.stringify(word));
 				wordService.add(word);				
 			}else{
-				console.log("update",JSON.stringify(wordForUpdate);
+				console.log("update",JSON.stringify(wordForUpdate));
 				wordService.update(wordForUpdate);
 			}
 			
