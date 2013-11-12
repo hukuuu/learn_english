@@ -1,5 +1,5 @@
 angular.module('add',['ui.bootstrap'])
-	.controller('AddCtrl',['$scope','WordService','TagService','$timeout','$rootScope','UtilsService',function($scope,wordService,tagService,$timeout,$rootScope,utilsService){
+	.controller('AddCtrl',['$scope','WordService','TagService','$timeout','$rootScope','UtilsService', 'NotificationService',function($scope,wordService,tagService,$timeout,$rootScope,utilsService, notificationService){
 		console.log('add controller is working',$scope);
 		var timeoutPromise;
 		$scope.word = {};
@@ -14,6 +14,8 @@ angular.module('add',['ui.bootstrap'])
 			tags:[]
 		}
 		$scope.onOk = function(){
+			var promise,
+				message;
 			var word = {
 				type: $scope.word.type,
   				englishValue: $scope.word.englishValue,
@@ -24,11 +26,19 @@ angular.module('add',['ui.bootstrap'])
 			console.log('wordForUpdate',wordForUpdate);
 			if(!$scope.isWordFound){
 				console.log("add",JSON.stringify(word));
-				wordService.add(word);				
+				promise = wordService.add(word);
+				message = 'word added!';
 			}else{
 				console.log("update",JSON.stringify(wordForUpdate));
-				wordService.update(wordForUpdate,$scope.originalWord.id);
+				promise = wordService.update(wordForUpdate,$scope.originalWord.id);
+				message = 'word updated!';
 			}
+
+			promise.then(function(res){
+				if(res.status < 400) { //TODO find better way
+					notificationService.success(message);
+				}
+			});
 			
 			
 		}
@@ -114,5 +124,4 @@ angular.module('add',['ui.bootstrap'])
 			console.log(index);
 			$scope.word.bulgarianValues.splice(index,1);
 		}
-
 	}]);

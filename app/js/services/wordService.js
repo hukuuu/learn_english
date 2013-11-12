@@ -1,10 +1,10 @@
 angular.module('services')
 	.factory('WordService', ['$http',function($http){
 		function add(word) {
-			$http.post('http://learnenglishonline.herokuapp.com/words.json', word);
+			return $http.post('http://learnenglishonline.herokuapp.com/words.json', word);
 		}
 		function update(obj,id) {
-			$http.put('http://learnenglishonline.herokuapp.com/words/' + id + ".json", obj );	
+			return $http.put('http://learnenglishonline.herokuapp.com/words/' + id + ".json", obj );	
 		}
 		function list (config) {
 
