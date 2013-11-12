@@ -9,13 +9,13 @@
     </head>
     <body>
 	<!-- Navigation-->
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default" role="navigation" ng-controller="NavigationCtrl">
             <div class="container">
-                <a class="navbar-brand" href="#/home">Learn English</a>
+                <a ng-class="{active:isActive('/home'), 'navbar-brand':true}" href="#/home">Learn English</a>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="navbar-brand" href="#/add">Add Word</a><li>
-                    <li><a class="navbar-brand" href="#/settings">Settings</a><li>
+                    <li><a ng-class="{active:isActive('/add'), 'navbar-brand':true}" href="#/add">Add Word</a><li>
+                    <li class="settings"><a ng-class="{active:isActive('/settings'), 'navbar-brand':true}" href="#/settings">Settings</a><li>
                 </ul>  
             </div>
         </nav>
@@ -47,6 +47,7 @@
         <script src="js/modules/add/controller.js"></script>
         <script src="js/modules/list/controller.js"></script>
         <script src="js/modules/search/controller.js"></script>
+        <script src="js/modules/navigation/controller.js"></script>
         <script src="js/modules/hotkeys/module.js"></script>
         <script src="js/modules/hotkeys/keymaps.js"></script>
         <!-- / Modules -->

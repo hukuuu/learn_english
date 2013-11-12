@@ -6,7 +6,8 @@ angular.module('myApp', [
   'ngRoute',
   'services',
   'directives',
-  'home'
+  'home',
+  'navigation'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
