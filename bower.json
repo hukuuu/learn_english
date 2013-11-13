@@ -19,6 +19,7 @@
     "angular-bootstrap-typeahead": "0.6.0",
     "angular": "~1.0.8",
     "angular-route": "~1.2.0-rc.3",
-    "mousetrap": "~1.4.5"
+    "mousetrap": "~1.4.5",
+    "toastr": "~2.0.1"
   }
 }
