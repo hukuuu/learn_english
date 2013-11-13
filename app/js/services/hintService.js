@@ -1,8 +1,10 @@
 angular.module('services')
 	.factory('HintService',[function(){
+		var defaultPerc = 40;
 
 		var state = localStorage.getItem('learnenglish:hintstate');
 		state = state ? JSON.parse(state) : {};
+		state.perc = state.perc || 40;
 
 		function saveState (){
 			localStorage.setItem('learnenglish:hintstate',JSON.stringify(state));
@@ -11,7 +13,7 @@ angular.module('services')
 		function hint(word){
 			var l = word.length;
 			var result = [];
-			var perc = state.perc || 40;
+			var perc = state.perc;
 			var visible = Math.ceil((word.length * perc/100) / 2);
 			Array.prototype.forEach.call(word,function(char,index){
 				var c;
