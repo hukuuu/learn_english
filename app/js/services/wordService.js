@@ -1,11 +1,16 @@
 angular.module('services')
-	.factory('WordService', ['$http',function($http){
+	.factory('WordService', ['$http','localStorage',function($http,localStorage){
+		console.log(localStorage);
 
 		var defaultWordsPerPage = 12;
 
-		var state = localStorage.getItem('learnenglish:wordsstate');
-		state = state ? JSON.parse(state) : {};
-		state.wordsPerPage = state.wordsPerPage || defaultWordsPerPage;
+		var state = {};
+		localStorage.get('wordsstate',function(st){
+			state = st;
+			state = state ? JSON.parse(state) : {};
+			state.wordsPerPage = state.wordsPerPage || defaultWordsPerPage;
+			console.log('33');
+		});
 
 		function add(word) {
 			return $http.post('http://learnenglishonline.herokuapp.com/words.json', word);
@@ -26,7 +31,7 @@ angular.module('services')
 			}
 			return $http.get('http://learnenglishonline.herokuapp.com/words.json',{params:params});
 		}
-		function saveState(){ localStorage.setItem('learnenglish:wordsstate',JSON.stringify(state)); };
+		function saveState(){ localStorage.set({'wordsstate':JSON.stringify(state)}); };
 		function getWordsPerPage () { return state.wordsPerPage; };
 		function setWordsPerPage (val) { state.wordsPerPage = val; saveState(); };
 		return {
