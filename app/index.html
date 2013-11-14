@@ -5,36 +5,39 @@
         <title>My AngularJS App</title>
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="css/app.css"/>
-        <link rel="stylesheet" href="../bower_components/toastr/toastr.css"/>
+        <link rel="stylesheet" href="css/slider.css">
+       <!--  <link rel="stylesheet" href="../bower_components/toastr/toastr.css"/> -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
 	<!-- Navigation-->
-        <nav class="navbar navbar-default" role="navigation" ng-controller="NavigationCtrl">
-            <div class="container">
-                <a ng-class="{active:isActive('/home'), 'navbar-brand':true}" href="#/home">Learn English</a>
+        <div id="container">
+            <nav class="navbar navbar-default" role="navigation" ng-controller="NavigationCtrl">
+                <div class="container">
+                    <a ng-class="{active:isActive('/home'), 'navbar-brand':true}" href="#/home" id="logo">Learn English</a>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a ng-class="{active:isActive('/add'), 'navbar-brand':true}" href="#/add">Add Word</a><li>
-                    <li class="settings"><a ng-class="{active:isActive('/settings'), 'navbar-brand':true}" href="#/settings">Settings</a><li>
-                </ul>  
-            </div>
-        </nav>
-	<!-- / Navigation-->
-	<!-- Container Content -->
-        <div ng-view id="content" class="container"></div>
-        <!-- / Container Content -->
-       
-        <!-- In production use:
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-        -->
-
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ng-class="{active:isActive('/add'), 'navbar-brand':true}" href="#/add">Add Word</a><li>
+                        <li class="settings"><a ng-class="{active:isActive('/settings'), 'navbar-brand':true}" href="#/settings">Settings</a><li>
+                    </ul>  
+                </div>
+            </nav>
+    	<!-- / Navigation-->
+    	<!-- Container Content -->
+            <div ng-view id="content" class="container"></div>
+            <!-- / Container Content -->
+           
+            <!-- In production use:
+            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+            -->
+        </div>
         <!-- Libs -->
         <script src="../bower_components/jquery/jquery.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/angular-route/angular-route.js"></script>
         <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-0.6.0.js"></script>
         <script src="../bower_components/angular-bootstrap-typeahead/ui-bootstrap-custom-tpls-0.6.0.js"></script>
+        <script src="../bower_components/bootstrap-slider/bootstrapSlider.js"></script>
 
         <!-- / Libs -->
 
@@ -42,7 +45,7 @@
 
 	<!--external-->
         <script src="../bower_components/mousetrap/mousetrap.js"></script>
-        <script src="../bower_components/toastr/toastr.js"></script>
+        <!--<script src="../bower_components/toastr/toastr.js"></script> -->
 	<!--external-->
 
         <!-- Modules -->
@@ -60,6 +63,7 @@
         <script src="js/directives/module.js"></script>
         <script src="js/directives/enter/enter.js"></script>
         <script src="js/directives/word/word.js"></script>
+        <script src="js/directives/bootstarpSlider/bootstarpSlider.js"></script>
         <!-- / Directives -->
 
         <!-- Services -->

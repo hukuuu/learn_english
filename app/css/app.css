@@ -1,9 +1,22 @@
 /* =============================================================================
   GENERAL
 ============================================================================= */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Open Sans', arial, sans-serif;
     background: #fff url('../img/bg.gif');
+}
+
+h1 {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .word {
@@ -71,6 +84,7 @@ body {
 /* =============================================================================
   NAVBAR
 ============================================================================= */
+
 .navbar-default {
     padding: 20px 0 0;
     border: none;
@@ -101,9 +115,9 @@ body {
     margin-right: 0;
 }
 
-.active,
+.navbar .navbar-brand.active,
 .navbar-brand:hover, 
-.navbar-brand:hover:focus {
+.navbar-brand:focus {
     color: #464646;
     border-bottom: 2px solid #464646;
 }
@@ -172,8 +186,14 @@ body {
 
 /*** Main Tools ***/
 
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
 #content {
-    padding: 15px;
+    padding: 15px 15px 150px 15px;
+    border-bottom: none;
 }
 
 .main-tools {
@@ -258,6 +278,7 @@ body {
 
 /*** / Add form ***/
 
+
 /* =============================================================================
   MEDIA QUERY
 ============================================================================= */
@@ -268,13 +289,20 @@ body {
     .navbar > .container .navbar-brand {
         margin-left: 0;
     }
+
+    footer nav {
+        max-width: 750px;
+    } 
 }
 
 /*** Medium devices (desktops, 992px and up) ***/
 
 @media (min-width: 992px) {
     
-    
+    footer nav {
+        max-width: 970px;
+    } 
+
 }
 
 /*** Large devices (large desktops, 1200px and up) ***/
@@ -283,6 +311,9 @@ body {
     
     .main-tools form > div {
         margin-bottom: 0;
-    }  
-      
+    } 
+
+    footer nav {
+        max-width: 1170px;
+    }    
 }
