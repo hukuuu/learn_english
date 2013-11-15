@@ -6,11 +6,14 @@ angular.module('directives')
                 restrict: 'A',
                 require: 'ngModel',
                 link: function(scope, element, attrs) {
+
                     var el = $(element);
-                    var value = el.val();
+                    var value = scope[attrs.ngModel];
                     var params = scope.$eval(attrs.bootstrapSlider);
                     params.value = parseInt(value);
                     params.tooltip = 'hide';
+
+
                     el.slider(params)
                         .on('slide', function(evt) {
                             $timeout(function() {

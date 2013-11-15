@@ -4,7 +4,6 @@ angular.module('settings',[])
 		$scope.hintPercentage = hintService.getPercentage();
 		$scope.wordsPerPage =  wordService.getWordsPerPage();
 		$scope.save = function(){
-			console.log('adsf');
 			hintService.setPercentage($scope.hintPercentage);
 			wordService.setWordsPerPage($scope.wordsPerPage);
 		}
