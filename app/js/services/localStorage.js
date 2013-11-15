@@ -6,7 +6,7 @@ angular.module('services')
 			var ls= {};
 			ls.get = function(key, callback) {
 				console.log('dfs');
-				callback(localStorage.get(key));
+				callback(localStorage.getItem(key));
 			};
 			ls.set = function(keyval) {
 				console.log('dfs');
