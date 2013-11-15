@@ -1,15 +1,15 @@
-<div ng-controller="SettingsCtrl">
-    <form id="add-form" class="" role="form" >
+<div ng-controller="SettingsCtrl" class="row">
+    <form id="add-form" class="settings-form" role="form" >
     <h1>Settings</h1>
-        <div class="col-lg-12">
+        <div class="col-lg-12 range-slider-hints">
 		<label for="hintPercentage">Hint Percentage</label>
 	<input type="range" id="hintPercentage" ng-model="hintPercentage" bootstrap-slider="{max: 100, step: 10}" />
 	<span class="range-slider-max-value">{{hintPercentage}}</span>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 range-slider-words">
 		<label for="hintPercentage">Words Per Page</label>
-		<input type="range" min="1" id="hintPercentage" ng-model="wordsPerPage"/>
-		<span>{{wordsPerPage}}</span>
+		<input type="range" min="1" id="hintPercentage" ng-model="wordsPerPage" bootstrap-slider="{max: 100}" />
+		<span class="range-slider-max-value">{{wordsPerPage}}</span>
         </div>
         <div class="col-lg-12">
             <button type="button" class="btn btn-primary btn-lg" ng-click="save()">Save</button>
