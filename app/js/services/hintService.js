@@ -1,13 +1,17 @@
 angular.module('services')
-	.factory('HintService',[function(){
+	.factory('HintService',['localStorage',function(localStorage){
 		var defaultPerc = 40;
 
-		var state = localStorage.getItem('learnenglish:hintstate');
-		state = state ? JSON.parse(state) : {};
-		state.perc = state.perc || 40;
+		var state = {};
+		localStorage.get('learnenglish:hintstate',function(st){
+			state = st;
+			state = state ? JSON.parse(state) : {};
+			state.perc = state.perc || 40;
+			console.log('adf');
+		});
 
 		function saveState (){
-			localStorage.setItem('learnenglish:hintstate',JSON.stringify(state));
+			localStorage.set({'learnenglish:hintstate':JSON.stringify(state)});
 		}
 
 		function hint(word){
