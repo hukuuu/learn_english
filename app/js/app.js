@@ -8,12 +8,14 @@ angular.module('myApp', [
   'directives',
   'home',
   'navigation',
-  'settings'
+  'settings',
+  'about'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
 	.when('/home', {templateUrl: 'js/modules/home/view.html'})
 	.when('/add', {templateUrl: 'js/modules/add/view.html'})
 	.when('/settings', {templateUrl: 'js/modules/settings/view.html'})
+  .when('/about', {templateUrl: 'js/modules/about/view.html'})
 	.otherwise({redirectTo: '/home'});
 }]);

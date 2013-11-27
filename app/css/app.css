@@ -12,9 +12,14 @@ body {
 }
 
 h1 {
+    font-size: 25px;
     font-family: 'Open Sans', arial, sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: -1px;
+}
+
+h1 small {
+    font-size: 18px;
 }
 
 .word {
@@ -79,6 +84,20 @@ h1 {
     outline: 0 none;
 }
 
+button,
+a,
+input,
+a:focus {
+    outline: none;
+}
+
+.container-content {
+    position: relative;
+    padding: 22px;
+    border: 2px solid #fff;
+    background: #f4f4f4;
+}
+
 /* =============================================================================
   NAVBAR
 ============================================================================= */
@@ -98,7 +117,7 @@ h1 {
 
 .container > .navbar-brand {
     padding-left: 0;
-    font-size: 30px;
+    font-size: 36px;
     padding-right: 0;
     color: #464646;
     font-weight: 100;
@@ -109,7 +128,7 @@ h1 {
     padding: 15px 0;
 }
 
-.navbar-default .navbar-nav .settings a {
+.navbar-default .navbar-nav .about a {
     margin-right: 0;
 }
 
@@ -293,6 +312,29 @@ h1 {
 
 #add-form  label {
     width: 122px;
+}
+
+/* =============================================================================
+  ABOUT
+============================================================================= */
+.about-page .container-content {
+  margin-bottom: 72px;
+}
+
+.about-page img {
+    position: absolute;
+    top: -20px;
+    width: 110px;
+}
+
+.about-page h2 {
+    font-size: 20px;
+    color: #428bca;
+    margin: 0 0 0 122px;
+}
+
+.about-page p {
+    margin: 0 0 0 122px;
 }
 
 /* =============================================================================
