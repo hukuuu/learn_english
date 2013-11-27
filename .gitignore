@@ -3,3 +3,4 @@ logs/*
 *.swp
 bower_components
 nbproject/*
+node_modules/*
