@@ -1,4 +1,43 @@
 /* =============================================================================
+  FONTS
+============================================================================= */
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/open-sans/OpenSans-Light-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+/* =============================================================================
   GENERAL
 ============================================================================= */
 * {
@@ -7,14 +46,18 @@
 }
 
 body {
-    font-family: 'Open Sans', arial, sans-serif;
+    font-family: 'Open Sans', 'open_sansregular', arial, sans-serif;
     background: #fff url('../img/bg.gif');
+}
+
+h1,
+h2 {
+    font-family: 'Open Sans', 'open_sansregular', arial, sans-serif;
+    font-weight: 400;
 }
 
 h1 {
     font-size: 25px;
-    font-family: 'Open Sans', arial, sans-serif;
-    font-weight: 400;
     letter-spacing: -1px;
 }
 
@@ -85,10 +128,11 @@ h1 small {
 }
 
 button,
+button:focus,
 a,
 input,
 a:focus {
-    outline: none;
+    outline: none !important;
 }
 
 .container-content {
@@ -244,14 +288,14 @@ a:focus {
 .labales .item {
     display: inline-block;
     line-height: 18px;
-    color: #999999;
+    color: #525252;
     vertical-align: middle;
     font-size: 12px;
     padding: 0 2px 0 5px;
     margin-right: 6px;
     margin-bottom: 6px;
     border: 1px solid #cccccc;
-    border-radius: 4px;
+    border-radius: 2px;
     background: white;
 }
 
@@ -285,6 +329,11 @@ a:focus {
 #add-form .input-group button {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.form-control .glyphicon {
+  top: 2px;
+  color: rgb(204, 62, 62);
 }
 
 /*** / Add form ***/
@@ -333,8 +382,29 @@ a:focus {
     margin: 0 0 0 122px;
 }
 
+.about-page h2 span,
+.about-page p span {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.about-page h2 span, 
+.about-page p span {
+    margin-right: 10px;
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+} 
+
 .about-page p {
     margin: 0 0 0 122px;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.about-page p:last-child {
+    margin-bottom: 20px;
 }
 
 /* =============================================================================
