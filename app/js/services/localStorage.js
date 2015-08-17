@@ -3,6 +3,9 @@ angular.module('services')
 
 
 		function getBrowserLocalStorage(localStorage) {
+			if(!localStorage) {
+				throw new Error("no localStorage");
+			}
 			var ls= {};
 			ls.get = function(key, callback) {
 				console.log('dfs');
