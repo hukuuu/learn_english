@@ -1,45 +1,34 @@
 /* =============================================================================
   FONTS
 ============================================================================= */
+
 @font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot');
-    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'open_sanslight';
     src: url('../fonts/open-sans/OpenSans-Light-webfont.eot');
-    src: url('../fonts/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/open-sans/OpenSans-Light-webfont.woff') format('woff'),
-         url('../fonts/open-sans/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    src: url('../fonts/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
     font-weight: lighter;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'open_sansbold';
     src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot');
-    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
-         url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
     font-weight: bold;
     font-style: normal;
-
 }
-
 /* =============================================================================
   GENERAL
 ============================================================================= */
+
 * {
     -webkit-font-smoothing: antialiased !important;
     /*-webkit-font-smoothing: subpixel-antialiased;*/
@@ -141,7 +130,6 @@ a:focus {
     border: 2px solid #fff;
     background: #f4f4f4;
 }
-
 /* =============================================================================
   NAVBAR
 ============================================================================= */
@@ -150,7 +138,6 @@ a:focus {
     padding: 20px 0 0;
     border: none;
     background: transparent;
-    
 }
 
 .container {
@@ -177,29 +164,27 @@ a:focus {
 }
 
 .navbar .navbar-brand.active,
-.navbar-brand:hover, 
+.navbar-brand:hover,
 .navbar-brand:focus {
     color: #464646;
     border-bottom: 2px solid #464646;
 }
-
 /* =============================================================================
   FORM
 ============================================================================= */
 
 .main-tools {
-    margin-bottom: 15px;    
+    margin-bottom: 15px;
     padding: 22px;
     border: 2px solid #fff;
     background: #f4f4f4;
 }
-
 /* =============================================================================
   SUCCESS
 ============================================================================= */
 
 .word-success label {
-   background-color: #5cb85c;
+    background-color: #5cb85c;
 }
 
 .word-success label:after {
@@ -216,7 +201,6 @@ a:focus {
     border-color: #356635;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #7abA7b;
 }
-
 /* =============================================================================
   ERROR
 ============================================================================= */
@@ -239,50 +223,47 @@ a:focus {
     border-color: #953b39;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #d59392;
 }
-
-
 /* =============================================================================
   CONTENT
 ============================================================================= */
-
 /*** Main Tools ***/
+
 #content {
     padding: 15px;
     border-bottom: none;
 }
 
 .main-tools {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .main-tools form > div {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .main-tools form > div:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .main-tools form > div:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 /*** / Main Tools ***/
-
 /*** words container ***/
+
 .main-tools + div > div {
     padding: 22px;
     border: 2px solid #fff;
     background: #f4f4f4;
 }
 /*** / words container ***/
-
 /*** Labales ***/
 
 .labales .form-control {
-  padding-right: 6px;
-  padding-bottom: 0;
-  height: auto;
-  min-height: 34px;
+    padding-right: 6px;
+    padding-bottom: 0;
+    height: auto;
+    min-height: 34px;
 }
 
 .labales .item {
@@ -302,9 +283,7 @@ a:focus {
 .labales .item a {
     color: #999999;
 }
-
 /*** / Labales ***/
-
 /*** Add form ***/
 
 .container h1 {
@@ -324,23 +303,22 @@ a:focus {
 #add-form > div,
 #add-form > div .input-group {
     margin-bottom: 10px;
-}  
+}
 
 #add-form .input-group button {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .form-control .glyphicon {
-  top: 2px;
-  color: rgb(204, 62, 62);
+    top: 2px;
+    color: rgb(204, 62, 62);
 }
-
 /*** / Add form ***/
-
 /* =============================================================================
   SETTINGS
 ============================================================================= */
+
 .range-slider-max-value {
     display: inline-block;
     font-weight: bold;
@@ -359,15 +337,15 @@ a:focus {
     margin-bottom: 30px;
 }
 
-#add-form  label {
+#add-form label {
     width: 122px;
 }
-
 /* =============================================================================
   ABOUT
 ============================================================================= */
+
 .about-page .container-content {
-  margin-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .about-page img {
@@ -390,13 +368,13 @@ a:focus {
     font-weight: normal;
 }
 
-.about-page h2 span, 
+.about-page h2 span,
 .about-page p span {
     margin-right: 10px;
     width: 100px;
     display: inline-block;
     text-align: right;
-} 
+}
 
 .about-page p {
     margin: 0 0 0 122px;
@@ -407,34 +385,34 @@ a:focus {
 .about-page p:last-child {
     margin-bottom: 20px;
 }
-
 /* =============================================================================
   BOOTSRAP SLIDER PLUGIN
 ============================================================================= */
+
 #add-form .slider.slider-horizontal {
-  width: 220px !important;
-  height: 20px;
-  margin: -7px 10px 0;
+    width: 220px !important;
+    height: 20px;
+    margin: -7px 10px 0;
 }
 
 #add-form .slider.slider-horizontal .slider-track {
-  height: 15px;
-  width: 100%;
-  margin-top: -5px;
-  top: 50%;
-  left: 0;
+    height: 15px;
+    width: 100%;
+    margin-top: -5px;
+    top: 50%;
+    left: 0;
 }
 
 #add-form .slider.slider-vertical .slider-handle {
-  margin-left: -5px;
-  margin-top: -10px;
+    margin-left: -5px;
+    margin-top: -10px;
 }
 
 #add-form .slider-track {
-  position: absolute;
-  cursor: pointer;
-  background: #e9e9e9;
-/*  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+    position: absolute;
+    cursor: pointer;
+    background: #e9e9e9;
+    /*  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
   background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
   background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
@@ -444,18 +422,18 @@ a:focus {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);*/
-
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1) inset;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+    
+    -webkit-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1) inset;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 #add-form .slider-selection {
-  position: absolute;
-  /*background-color: #f7f7f7;
+    position: absolute;
+    /*background-color: #f7f7f7;
   background-image: -moz-linear-gradient(top, #f9f9f9, #f5f5f5);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#f5f5f5));
   background-image: -webkit-linear-gradient(top, #f9f9f9, #f5f5f5);
@@ -463,25 +441,26 @@ a:focus {
   background-image: linear-gradient(to bottom, #f9f9f9, #f5f5f5);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff9f9f9', endColorstr='#fff5f5f5', GradientType=0);*/
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border-top: 1px solid #eee;
-  background: #fff;
+    
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-top: 1px solid #eee;
+    background: #fff;
 }
 
 #add-form .slider-handle {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: #428bca;
-/*  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #428bca;
+    /*  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
   background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
   background-image: -o-linear-gradient(top, #149bdf, #0480be);
@@ -491,55 +470,47 @@ a:focus {
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);*/
-  border: 1px solid #357ebd;
+    
+    border: 1px solid #357ebd;
 }
 
 #add-form .slider-handle:hover {
-  background-color: #3276b1;
-  border-color: #285e8e;
+    background-color: #3276b1;
+    border-color: #285e8e;
 }
 
 #add-form .slider-handle.round {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
-
 /* =============================================================================
   MEDIA QUERY
 ============================================================================= */
-
 /*** Small devices (tablets, 768px and up) ***/
 
 @media (min-width: 768px) {
     .navbar > .container .navbar-brand {
         margin-left: 0;
     }
-
     footer nav {
         max-width: 750px;
-    } 
+    }
 }
-
 /*** Medium devices (desktops, 992px and up) ***/
 
 @media (min-width: 992px) {
-    
     footer nav {
         max-width: 970px;
-    } 
-
+    }
 }
-
 /*** Large devices (large desktops, 1200px and up) ***/
 
 @media (min-width: 1200px) {
-    
     .main-tools form > div {
         margin-bottom: 0;
-    } 
-
+    }
     footer nav {
         max-width: 1170px;
-    }    
+    }
 }

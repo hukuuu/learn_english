@@ -21,6 +21,7 @@
     "angular-route": "~1.2.0-rc.3",
     "mousetrap": "~1.4.5",
     "toastr": "~2.0.1",
-    "bootstrap-slider": "*"
+    "bootstrap-slider": "*",
+    "jQuery": "~2.1.4"
   }
 }
