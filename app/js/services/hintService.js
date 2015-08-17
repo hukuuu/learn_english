@@ -5,7 +5,10 @@ angular.module('services')
 		var state = {};
 		localStorage.get('learnenglish:hintstate',function(st){
 			state = st;
-			state = state ? JSON.parse(state) : {};
+			try {
+				state = state ? JSON.parse(state) : {};
+			} catch (e) {
+			}
 			state.perc = state.perc || 40;
 			console.log('adf');
 		});

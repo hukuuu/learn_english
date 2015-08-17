@@ -7,7 +7,11 @@ angular.module('services')
 		var state = {};
 		localStorage.get('wordsstate',function(st){
 			state = st;
-			state = state ? JSON.parse(state) : {};
+			try {
+				state = state ? JSON.parse(state) : {};
+			} catch (e) {
+			}
+			
 			state.wordsPerPage = state.wordsPerPage || defaultWordsPerPage;
 			console.log('33');
 		});
